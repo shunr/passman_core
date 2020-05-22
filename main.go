@@ -16,4 +16,5 @@ func main() {
 
 	client := api.NewPassmanClient(true, "", "localhost:13222")
 	client.CreateAccount(username, password)
+	defer client.Close()
 }

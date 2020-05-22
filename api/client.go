@@ -92,7 +92,7 @@ func (c *PassmanClient) CreateAccount(username string, password string) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	// TODO: Timeout constant
 	defer cancel()
-	request := pb.CreateAccountRequest{Username: username}
+	request := pb.CreateAccountRequest{Username: username} // TODO: Populate this object
 	response, err := (*c.client).CreateAccount(ctx, &request)
 	if err != nil {
 		log.Fatalf("%v.CreateAccount(_) = _, %v: ", c.client, err)
