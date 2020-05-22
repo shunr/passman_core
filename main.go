@@ -3,8 +3,8 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"github.com/shunr/passman_core/api"
 	"os"
-	"passman_core/api"
 )
 
 func main() {
@@ -14,5 +14,6 @@ func main() {
 	fmt.Print("Password: ")
 	password, _ := reader.ReadString('\n')
 
-	api.CreateAccount(username, password)
+	client := api.NewPassmanClient(true, "", "localhost:13222")
+	client.CreateAccount(username, password)
 }

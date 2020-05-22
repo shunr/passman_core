@@ -1,4 +1,4 @@
-module passman_core
+module github.com/shunr/passman_core
 
 go 1.14
 
@@ -8,4 +8,5 @@ require (
 	golang.org/x/crypto v0.0.0-20200510223506-06a226fb4e37
 	golang.org/x/text v0.3.0
 	google.golang.org/grpc v1.29.1
+	google.golang.org/protobuf v1.23.0
 )

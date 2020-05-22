@@ -2,8 +2,8 @@ package util
 
 import (
 	"crypto/rsa"
+	"github.com/shunr/passman_core/crypto"
 	"golang.org/x/text/unicode/norm"
-	"passman_core/crypto"
 	"strings"
 )
 
